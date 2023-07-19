@@ -1,0 +1,111 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+body, html {
+    /* Set the height of the body and html to 100% to ensure the container fills the whole viewport */
+    height: 100%;
+    margin: 0; /* Remove default margin to avoid unnecessary spacing */
+    padding: 0; /* Remove default padding to avoid unnecessary spacing */
+  }
+
+body {
+    background: linear-gradient(to bottom, #119ff8,#7accfb);
+  }
+
+
+.calculator {
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 50px;
+     
+}
+
+.screen {
+    padding: 30px 60px;
+    
+}
+
+.screen-r1 {
+    font-size:200%;
+    display: flex;
+    justify-content: flex-end;
+    color: #bac5c5;
+}
+
+
+.screen-r2 {
+    font-size: 300%;
+    display: flex;
+    justify-content: flex-end;
+    color: #3a4545;
+}
+
+.calc-buttons {
+    width: 340px;
+    height:70%;
+    border-top: 2px solid #e3e8e8;
+    width: 100%;
+    padding: 10px 30px;
+}
+
+
+.calc-button {
+    background-color: white;
+    border: none;
+    height: 80px;
+    width: 80px;
+    font-size: 150%;
+    color: #bac5c5;
+    cursor: pointer;
+}
+
+.calc-button:hover {
+    background-color: #7accfb;
+    color: black;
+    border-radius: 50px;
+}
+
+.double {
+    width: 160px;
+}
+
+.calc-button.black {
+    color: black;
+}
+
+.calc-button:last-child {
+    color:#119ff8; 
+}
+
+.calc-button.equalsdesign {
+    background-color: #119ff8;
+    color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-left: 15px;
+    font-size: 250%;
+}
+
+
+@media (max-width: 420px) {
+    .calculator {
+        width: 100%;
+        height: auto;
+        
+    }
+}
