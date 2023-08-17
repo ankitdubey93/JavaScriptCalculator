@@ -44,6 +44,7 @@ body {
     display: flex;
     justify-content: flex-end;
     color: #bac5c5;
+    min-height: 20px;
 }
 
 
@@ -73,11 +74,7 @@ body {
     cursor: pointer;
 }
 
-.calc-button:hover {
-    background-color: #7accfb;
-    color: black;
-    border-radius: 50px;
-}
+
 
 .double {
     width: 160px;
@@ -101,6 +98,11 @@ body {
     font-size: 250%;
 }
 
+.calc-button:hover {
+    background-color: #7accfb;
+    color: black;
+    border-radius: 50px;
+}
 
 @media (max-width: 420px) {
     .calculator {
