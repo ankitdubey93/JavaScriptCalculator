@@ -1,6 +1,6 @@
 "use strict";
 let upperScreenValue = null;
-let lowerScreenValue = null;
+let lowerScreenValue = 0;
 let leftOperand = null;
 let rightOperand = null;
 let operator = null;
@@ -56,7 +56,7 @@ const checkButton = (value) => {
 
                     rightOperand = rightOperand + value;
                     lowerScreenValue = rightOperand;
-                    upperScreenValue = leftOperand + operator + rightOperand;
+                    upperScreenValue = operator + rightOperand;
                     
                 }
             }
