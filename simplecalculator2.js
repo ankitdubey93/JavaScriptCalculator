@@ -76,6 +76,8 @@ const checkButton = (value) => {
     else if(value === '←') {
     }
 
+    
+
     else if(value === '=') {
         upperScreenValue = upperScreenValue + '=';
         switch (operator) {
