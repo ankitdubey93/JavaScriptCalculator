@@ -56,7 +56,7 @@ const checkButton = (value) => {
 
                     rightOperand = rightOperand + value;
                     lowerScreenValue = rightOperand;
-                    upperScreenValue = operator + rightOperand;
+                    upperScreenValue = leftOperand + operator + rightOperand;
                     
                 }
             }
@@ -74,6 +74,41 @@ const checkButton = (value) => {
     }
 
     else if(value === '←') {
+        if(operator === null) {
+            if(leftOperand.length > 1) {
+                leftOperand = leftOperand.slice(0,-1);
+                upperScreenValue = leftOperand;
+                lowerScreenValue = leftOperand;
+                
+            }
+            else {
+                leftOperand = '0';
+                upperScreenValue = leftOperand;
+                lowerScreenValue = leftOperand;
+                
+            }
+        }
+        else {
+            if(rightOperand === null) {
+                operator = null;
+                upperScreenValue = leftOperand;
+            }
+
+            else {
+                if(rightOperand.length > 1) {
+                    rightOperand = rightOperand.slice(0,-1);
+                    upperScreenValue = leftOperand + operator + rightOperand;
+                    
+                }
+                else {
+                    if(rightOperand )
+                    rightOperand = '0';
+                    upperScreenValue = leftOperand + operator;
+                 
+                }
+            }
+        }
+        
     }
 
     
@@ -140,4 +175,5 @@ const logApplicationState = () => {
 
 
 init();
+
 
